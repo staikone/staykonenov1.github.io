@@ -1523,7 +1523,7 @@ margin-left: 16px;
 }
 
 .txt-fx.slide-up {
-    transform: translateY(50px);
+    /*transform: translateY(50px);*/
     transition-duration: 1s;
 }
 
