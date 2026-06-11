@@ -204,22 +204,55 @@ themeButton.addEventListener("click", () => {
 });
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
-const revealElements = document.querySelectorAll('.reveal-top');
+// Наблюдаваме както старите елементи, така и новите txt-fx
+const revealElements = document.querySelectorAll('.reveal-top, .txt-fx');
 
 const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active-reveal');
-            observer.unobserve(entry.target); // run once
+            observer.unobserve(entry.target); // Изпълнява се само веднъж
         }
     });
-
-    }, {
+}, {
     root: null,
-    threshold: 0.15,
-    rootMargin: "0px"
+    threshold: 0.15 // Анимацията се задейства, когато 15% от елемента е в екрана
 });
 
-    revealElements.forEach(el => {
-    revealObserver.observe(el);
+revealElements.forEach(element => {
+    revealObserver.observe(element);
+});
+
+/*==================== TEXT FX ANIMATION (LETTER SPLIT) ====================*/
+function initTextFx() {
+    const textFxElements = document.querySelectorAll('.txt-fx');
+    
+    textFxElements.forEach(element => {
+        // Вземаме чистия текст без излишни празни пространства
+        const text = element.textContent.trim();
+        element.textContent = ''; // Изчистваме оригиналния текст
+        
+        // Разделяме текста на букви
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement('span');
+            
+            // Ако е интервал, добавяме специален символ, за да не се счупи подравняването
+            if (text[i] === ' ') {
+                span.innerHTML = '&nbsp;';
+            } else {
+                span.textContent = text[i];
+            }
+            
+            span.classList.add('letter');
+            // Изчисляваме прогресивно закъснение за всяка буква (стъпка от 35ms)
+            span.style.transitionDelay = `${i * 35}ms`;
+            
+            element.appendChild(span);
+        }
+    });
+}
+
+// Стартираме функцията веднага след зареждане на DOM дървото
+document.addEventListener('DOMContentLoaded', () => {
+    initTextFx();
 });
