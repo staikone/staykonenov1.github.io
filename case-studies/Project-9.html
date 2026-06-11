@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study – Rebooking Option for Past Stays</title>
+  <link rel="stylesheet" href="../css/case-study.css" />
+</head>
+<body>
+  <header class="cs-header">
+    <h1>Rebooking Option for Past Trips</h1>
+    <p class="subtitle">Adding a “Check Availability” CTA to Airbnb’s past reservation UI</p>
+  </header>
+
+  <section class="cs-intro">
+    <h2>Overview</h2>
+    <p>
+      Many users revisit places they enjoyed and want to rebook them. On Airbnb’s “Past Reservation” view, there is no visible path to check availability or rebook directly. My task was to design a minimal but effective enhancement — a CTA integrated into the existing reservation view — that encourages rebooking while respecting Airbnb’s UI style and minimizing visual noise.
+    </p>
+  </section>
+
+  <section class="cs-problem">
+    <h2>Problem</h2>
+    <p>
+      When viewing a past reservation, users see useful details (dates, host, instructions), but there is **no way** to check availability or rebook. This creates friction for loyal users wanting to revisit favorite stays. The absence of this functionality undermines retention and user loyalty.
+    </p>
+  </section>
+
+  <section class="cs-process">
+    <h2>Process</h2>
+    <ol>
+      <li><strong>UX Audit & Needs Analysis:</strong> Analyzed the reservation-details screen, identified user pain points, and noted that frequent users expect rebooking options.</li>
+      <li><strong>Design Constraints & Style Matching:</strong> Reviewed Airbnb’s UI language, tone, and component standards to ensure consistency.</li>
+      <li><strong>CTA Positioning Ideation:</strong> Sketched multiple placements for the “Check availability” button near the property header, above the trip summary, or within the reservation card.</li>
+      <li><strong>Visual Design & Interaction:</strong> Created button variants, hover/tap states, and responsive adjustments. Ensured legibility and contrast in both mobile and desktop layouts.</li>
+      <li><strong>Prototyping & Review:</strong> Built mockups for both views, reviewed with stakeholders for clarity and minimal disruption, and refined positioning and spacing.</li>
+    </ol>
+    <div class="cs-gallery">
+      <img src="../images/wireframe-rebooking.png" alt="Wireframe showing rebooking CTA" />
+      <img src="../images/mockup-rebooking.png" alt="Mockup of final rebooking UI" />
+    </div>
+  </section>
+
+  <section class="cs-solution">
+    <h2>Solution</h2>
+    <p>
+      The solution introduces a new CTA section labeled “Loved this place?” right above the trip summary. Users see a clear “Check Availability” button that leads to a rebooking flow. On desktop, hovering reveals subtle feedback; on mobile/tablet, tapping opens a modal. The design preserves Airbnb’s visual language and integrates seamlessly without disrupting existing layout.
+    </p>
+    <div class="cs-mockups">
+      <img src="../images/final-rebooking-ui.png" alt="Final UI showing rebooking CTA" />
+    </div>
+  </section>
+
+  <section class="cs-results">
+    <h2>Results</h2>
+    <ul>
+      <li>🚀 Rebooking path becomes one click away, reducing friction in user journey.</li>
+      <li>🎯 Maintains Airbnb’s clean and lightweight UI without adding clutter.</li>
+      <li>💡 Encourages loyalty-driven behavior by enabling repeat bookings.</li>
+      <li>📐 Compatible with responsive views: desktop, tablet, mobile.</li>
+    </ul>
+  </section>
+
+  <section class="cs-learnings">
+    <h2>Learnings</h2>
+    <p>
+      Even large platforms can overlook high-retention touchpoints. Working within brand constraints taught me how to add value with micro-enhancements. Under an NDA, I couldn’t share performance metrics; moving forward, I’ll push for A/B testing, click-through data, and integration into analytics from pilot releases to strengthen the UX narrative.
+    </p>
+  </section>
+
+  <footer class="cs-footer">
+    <a href="../index.html" class="btn">← Back to Portfolio</a>
+  </footer>
+</body>
+</html>
+
+
+<style>
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.cs-header {
+  background: #f5f5f5;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.cs-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cs-header .subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #222;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.cs-gallery, .cs-mockups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cs-gallery img, .cs-mockups img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.cs-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fafafa;
+}
+
+.cs-footer .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #0073e6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.cs-footer .btn:hover {
+  background: #005bb5;
+}
+  
+</style>
