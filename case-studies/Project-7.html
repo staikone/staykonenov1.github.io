@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study – Quick Search Page</title>
+  <link rel="stylesheet" href="../css/case-study.css">
+</head>
+<body>
+  <header class="cs-header">
+    <h1>Quick Search Page for Vehicle Repair Tools</h1>
+    <p class="subtitle">Redesigning navigation and category clarity for B2B automotive tools catalog</p>
+  </header>
+
+  <section class="cs-intro">
+    <h2>Overview</h2>
+    <p>
+      In a large B2B e-commerce platform for automotive parts, the tools category lacked an intuitive quick search page. My goal was to design and implement this page to improve discoverability, streamline navigation among categories, and ultimately boost tool-related sales. I held full UX/UI responsibility, created custom icons, implemented responsiveness, and ensured accessibility.
+    </p>
+  </section>
+
+  <section class="cs-problem">
+    <h2>Problem</h2>
+    <p>
+      The existing interface made it difficult for users to find tools by category. Navigation was unclear, icons were missing or generic, and mobile usability suffered. Many potential customers dropped off or failed to locate the parts they needed, hurting conversion and sales in the tools section.
+    </p>
+  </section>
+
+  <section class="cs-process">
+    <h2>Process</h2>
+    <ol>
+      <li><strong>Audit & Research:</strong> Reviewed existing catalog page analytics and user behavior in tools section.</li>
+      <li><strong>Category Mapping & Icon Design:</strong> Created 12 tool categories and designed custom icons/pictograms for better visual differentiation.</li>
+      <li><strong>Wireframing & Prototyping:</strong> Developed layout sketches and interactive navigation flows for both desktop and mobile.</li>
+      <li><strong>Responsiveness & Breakpoints:</strong> Ensured 2 items per row on tablet, 1 per row on mobile; navigation collapses into hamburger menu.</li>
+      <li><strong>Iteration & Feedback:</strong> Conducted internal reviews, usability feedback from operators, and refined icon sizes, hover states, touch targets.</li>
+    </ol>
+    <div class="cs-gallery">
+      <img src="../images/wireframe-tools.png" alt="Wireframe for quick search">
+      <img src="../images/mockup-tools.png" alt="Mockup of search interface">
+    </div>
+  </section>
+
+  <section class="cs-solution">
+    <h2>Solution</h2>
+    <p>
+      The final design features a sticky navigation bar for tool categories, custom icons for visual clarity, and responsive grids tuned for desktop, tablet, and mobile. Hover and click states improve discoverability. For markets with multiple languages, labels and tooltips adjust dynamically. The interface is also built with accessibility compliance in mind.
+    </p>
+    <div class="cs-mockups">
+      <img src="../images/final-tools-ui.png" alt="Final UI for quick search tools">
+    </div>
+  </section>
+
+  <section class="cs-results">
+    <h2>Results</h2>
+    <ul>
+      <li> Reported improvement in tool category conversion in pilot markets within 3 months of launch.</li>
+      <li> Positive feedback from both operators and end-users on navigation clarity</li>
+      <li> The Quick Search page was selected as a template for other catalog sections</li>
+      <li> Performance and usability were improved without sacrificing load speed</li>
+    </ul>
+  </section>
+
+  <section class="cs-learnings">
+    <h2>Learnings</h2>
+    <p>
+      Collaborating with product managers specialized in garage equipment gave me domain knowledge I couldn't have gained independently — it directly shaped category structure and icon decisions. Working across multiple markets also taught me to design for requirements I hadn't anticipated upfront; country-specific needs are best gathered before wireframing, not during iteration.
+    </p>
+  </section>
+
+  <footer class="cs-footer">
+    <a href="../index.html" class="btn">← Back to Portfolio</a>
+  </footer>
+</body>
+</html>
+
+
+<style>
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.cs-header {
+  background: #f5f5f5;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.cs-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cs-header .subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #222;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.cs-gallery, .cs-mockups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cs-gallery img, .cs-mockups img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.cs-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fafafa;
+}
+
+.cs-footer .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #0073e6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.cs-footer .btn:hover {
+  background: #005bb5;
+}
+  
+</style>
