@@ -1570,18 +1570,19 @@ margin-left: 16px;
         flex-direction: column;
     }
 
-    /*==================== ADVANCED TEXT & SCROLL ANIMATIONS ====================*/
+   /*==================== ADVANCED TEXT ANIMATIONS (JUBA REFERECE) ====================*/
 .txt-fx {
     display: inline-block;
-    overflow: hidden; /* Крие буквите, докато са долу */
+    overflow: hidden; /* Скрива буквите, докато не изскочат */
     vertical-align: top;
 }
 
 .txt-fx .letter {
     display: inline-block;
     opacity: 0;
-    /* Използваме същия премиум easing ефект за плавност */
+    /* Хардуерно ускорен преход с идентичен cubic-bezier за максимален мазнен ефект */
     transition: transform 0.8s cubic-bezier(.5, 0, .53, 1), opacity 0.8s cubic-bezier(.5, 0, .53, 1);
+    will-change: transform, opacity;
 }
 
 /* Ефект 1: Slide Up (Изскачане отдолу нагоре) */
@@ -1589,14 +1590,13 @@ margin-left: 16px;
     transform: translate3d(0, 1.2em, 0);
 }
 
-/* Ефект 2: Fade Right (Появяване с приплъзване надясно) */
+/* Ефект 2: Fade Right (Приплъзване отляво надясно с появяване) */
 .txt-fx.fade-right .letter {
-    transform: translate3d(-30px, 0, 0);
+    transform: translate3d(-40px, 0, 0);
 }
 
-/* Активиране на анимациите при скрол чрез Observer-а */
+/* Класът, който IntersectionObserver забива динамично при скрол */
 .txt-fx.active-reveal .letter {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-}
 }
