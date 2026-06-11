@@ -203,26 +203,57 @@ themeButton.addEventListener("click", () => {
     localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
-/*==================== SCROLL REVEAL ANIMATION ====================*/
-// Наблюдаваме както старите елементи, така и новите txt-fx
-const revealElements = document.querySelectorAll('.reveal-top, .txt-fx');
+/*==================== SCROLL REVEAL ANIMATION & TEXT FX ====================*/
 
-const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active-reveal');
-            observer.unobserve(entry.target); // Изпълнява се само веднъж
+// Функция, която цепи текста буква по буква и изчислява stagger delay
+function initTextFx() {
+    const textFxElements = document.querySelectorAll('.txt-fx');
+    
+    textFxElements.forEach(element => {
+        const text = element.textContent.trim();
+        element.textContent = ''; // Изчистваме стария текст
+        
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement('span');
+            
+            if (text[i] === ' ') {
+                span.innerHTML = '&nbsp;';
+            } else {
+                span.textContent = text[i];
+            }
+            
+            span.classList.add('letter');
+            // Вземаме стъпка от 35ms за премиум и плавен staggered преход
+            span.style.transitionDelay = `${i * 35}ms`;
+            
+            element.appendChild(span);
         }
     });
-}, {
-    root: null,
-    threshold: 0.15 // Анимацията се задейства, когато 15% от елемента е в екрана
-});
+}
 
-revealElements.forEach(element => {
-    revealObserver.observe(element);
-});
+// Стартираме цепенето на буквите веднага след като DOM е готов
+document.addEventListener('DOMContentLoaded', () => {
+    initTextFx();
+    
+    // Наблюдаваме както старите елементи (.reveal-top), така и новите анимации (.txt-fx)
+    const revealElements = document.querySelectorAll('.reveal-top, .txt-fx');
 
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active-reveal');
+                observer.unobserve(entry.target); // Изпълнява се само веднъж при скрол
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.15 // Задейства се при 15% видимост на елемента в екрана
+    });
+
+    revealElements.forEach(element => {
+        revealObserver.observe(element);
+    });
+});
 /*==================== TEXT FX ANIMATION (LETTER SPLIT) ====================*/
 function initTextFx() {
     const textFxElements = document.querySelectorAll('.txt-fx');
