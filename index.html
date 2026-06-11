@@ -1,313 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <style>
-    body {
-        transition: opacity ease-in 0.2s;
-    }
-
-    body[unresolved] {
-        opacity: 0;
-        display: block;
-        overflow: hidden;
-        position: relative;
-    }
-    </style>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stayko Nenov - Портфолио</title>
+    
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+    
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    
     <link rel="stylesheet" href="assets/css/main.css">
-    <title>Responsive Portfolio Website</title>
 </head>
-<body class="">
-    <header class="header" id="header" data-landmark-index="0">
-        <nav class="nav container" data-landmark-index="1">
-            <a href="https://staikone.github.io/SNTest.github.io/index.html" class="nav__logo">Stayko Nenov</a>
+<body>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo txt-fx slide-up">Stayko Nenov</a>
+            
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
-                    <li class="nav__item">
-                        <a href="https://staikone.github.io/SNTest.github.io/index.html#portfolio" class="nav__link">
-                            <i class="uil nav__icon uil-scenery"></i> Projects
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="https://staikone.github.io/SNTest.github.io/index.html#about" class="nav__link">
-                            <i class="uil nav__icon uil-user"></i> About
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a download="" href="https://drive.google.com/file/d/1XrD2A0Etg42ohongGsYNEXFhg9dVApa6/view?usp=drive_link" class="nav__link" target="_blank" rel="noopener">Download CV
-                        </a>
-                    </li>
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Начало</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">За мен</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Умения</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Портфолио</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Контакт</a></li>
                 </ul>
                 <i class="uil uil-times nav__close" id="nav-close"></i>
             </div>
+            
             <div class="nav__btns">
                 <i class="uil uil-moon change-theme" id="theme-button"></i>
+                
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="uil uil-apps"></i>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="main" data-landmark-index="2">
-        <section class="home section" id="home">
-            <div class="home__container container grid">
-                <div class="home__content grid">
-                    <div class="home__social">
-                    </div>
-                    <div class="home__img" data-sr-id="5" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.4s;">
-                        <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
-                                <path d="M250,50 A200,200 0 1,1 250,450 A200,200 0 1,1 250,50 Z"></path>
-                            </mask>
-                            <g mask="url(#mask0)">
-                               <path d="M250,50 A200,200 0 1,1 250,450 A200,200 0 1,1 250,50 Z"></path>
-                                <image class="home__blob-img" x="70" y="60" xlink:href="images/Stayko_no_BG.png"></image>
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="home__data">
-                        <h1 class="home__title txt-fx slide-up">Hi, I'm Stayko</h1>
-                        <h2 class="txt-fx slide-up">Visual, UX/UI Designer</h2>
-                        <p class="home__description reveal-fade-up delay-100">
-                            With 3 years of experience crafting user-friendly and engaging digital products. I focus on web and mobile design, combining clean visuals with thoughtful user experiences. Currently based in Bulgaria - Sofia.</p>
-                        <div class="reveal-fade-up delay-200" style="display: inline-block; margin-bottom: var(--mb-2);">
-                            <a href="mailto:staikone@gmail.com/" class="button button--flex">
-                                Contact Me <i class="uil uil-message button__icon"></i>
-                            </a>
-                        </div>
-                        <div class="home__social reveal-fade-up delay-300">
-                            <span class="home__social-text">Say Hello</span>
-                            <a href="https://www.linkedin.com/in/stayko-nenov" target="_blank" class="linkedin-button" aria-label="LinkedIn Profile">
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section__title txt-fx slide-up">Projects</h2>
-            <span class="section__subtitle reveal-fade-in delay-100">Most recent work</span>
-
-            <div class="services__container container grid">
-                <div class="services__content reveal-fade-up">
-                    <div>
-                        <img src="images/Macbook Pro and iphone OPT.jpg" alt="cover image" width="454" height="195">                       
-                        <h3 class="services__title">Enhancing Promotion Visibility in a B2B Automotive Parts Catalog</h3>
-                    </div>
-                    <a href="case-studies/Project-1.html" target="_blank" class="button button--flex button--small button--link services__button">
-                        View Case Study
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-
-                <div class="services__content reveal-fade-up delay-100">
-                    <div>
-                        <img src="images/Macbook Pro and iphone OPT.jpg" alt="cover image" width="454" height="195">                       
-                        <h3 class="services__title">Design & Implementation of Quick Search Page for Vehicle Repair Tools</h3>
-                    </div>
-                    <a href="case-studies/Project-2.html" target="_blank" class="button button--flex button--small button--link services__button">
-                        View Case Study
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-
-                <div class="services__content reveal-fade-up delay-200">
-                    <div>
-                        <img src="images/Macbook Pro and iphone OPT.jpg" alt="cover image" width="454" height="195">                       
-                        <h3 class="services__title">Redesign of the Entry Page for “Quick Search” Categories</h3>
-                    </div>
-                    <a href="case-studies/Project-3.html" target="_blank" class="button button--flex button--small button--link services__button">
-                        View Case Study
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-
-                <div class="services__content reveal-fade-up delay-300">
-                    <div>
-                        <img src="images/Macbook Pro and iphone OPT.jpg" alt="cover image" width="454" height="195">                       
-                        <h3 class="services__title">Airbnb – Rebooking Option for Past Trips</h3>
-                    </div>
-                    <a href="case-studies/Project-4.html" target="_blank" class="button button--flex button--small button--link services__button">
-                        View Case Study
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="about section" id="about">
-            <h2 class="section__title txt-fx slide-up">About Me</h2>
-            <span class="section__subtitle reveal-fade-in delay-100">My introduction</span>
-            <div class="about__container container grid">
-                <div class="about__data">
-                    <p class="about__description reveal-fade-up">
-                        I enjoy designing clean and user-friendly interfaces, with attention to both visuals and usability.  
-                        Most of my experience comes from working on web and mobile projects in B2B e-commerce, where I aim to keep things as simple and intuitive as possible.  
-                        I’m still growing as a designer and enjoy learning from every project I take on.  
-                        Currently open to new opportunities and collaborations.
-                    </p>
-                    <div class="about__info">
-                        <div class="reveal-fade-up">
-                            <span class="about__info-title">03</span>
-                            <span class="about__info-name">Years <br> UX/UI Focus</span>
-                        </div>
-                        <div class="reveal-fade-up delay-100">
-                            <span class="about__info-title">20+</span>
-                            <span class="about__info-name">International <br> Markets</span>
-                        </div>
-                        <div class="reveal-fade-up delay-200">
-                            <span class="about__info-title">01</span>
-                            <span class="about__info-name">Large <br> B2B Platform</span>
-                        </div>
-                    </div>
-                    <div class="about__buttons reveal-fade-up delay-300">
-                        <a download="" href="https://drive.google.com/file/d/1XrD2A0Etg42ohongGsYNEXFhg9dVApa6/view?usp=drive_link" class="button button--flex" target="_blank" rel="noopener">
-                            Download CV<i class="uil uil-download-alt button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="services section" id="services">
-            <h2 class="section__title txt-fx slide-up">Design Tools I Use</h2>
-            <span class="section__subtitle reveal-fade-in delay-100">
-                These are my go-to design tools. I enjoy testing new ones, but the real magic comes from practice and creativity.
-            </span>
-
-            <div class="services__container container grid">
-                <div class="services__content reveal-fade-up">
-                    <div>
-                        <img src="images/Figma.svg" alt="Figma Icon" width="80" height="80">
-                        <h3 class="services__title">Figma</h3>
-                    </div>
-                    <a class="button button--flex button--small button--link services__button"
-                       href="https://figma.com/" target="_blank" rel="noopener">
-                        Interface Design Tool
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-
-                <div class="services__content reveal-fade-up delay-100">
-                    <div>
-                        <img src="images/Ai.svg" alt="Adobe Illustrator Icon" width="80" height="80">
-                        <h3 class="services__title">Adobe<br>Illustrator</h3>
-                    </div>
-                    <a class="button button--flex button--small button--link services__button"
-                       href="https://www.adobe.com" target="_blank" rel="noopener">
-                        Vector Design Tool
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-
-                <div class="services__content reveal-fade-up delay-200">
-                    <div>
-                        <img src="images/Ps.svg" alt="Adobe Photoshop Icon" width="80" height="80">
-                        <h3 class="services__title">Adobe<br>Photoshop</h3>
-                    </div>
-                    <a class="button button--flex button--small button--link services__button"
-                       href="https://www.adobe.com" target="_blank" rel="noopener">
-                        Raster Design Tool
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-
-                <div class="services__content reveal-fade-up delay-300">
-                    <div>
-                        <img src="images/Jira_Logo.svg" alt="Jira Icon" width="80" height="80">
-                        <h3 class="services__title">Jira</h3>
-                    </div>
-                    <a class="button button--flex button--small button--link services__button"
-                       href="https://www.atlassian.com/software/jira?referer=jira.com/" target="_blank" rel="noopener">
-                        Productivity Tool
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-            </div>
-        </section>       
+    <main class="main">
         
-        <section class="contact section" id="contact">
-            <h2 class="section__title txt-fx slide-up">Contact Me</h2>
-            <span class="section__subtitle reveal-fade-in delay-100">Get in touch</span>
-            <div class="contact__container container grid">
-                <div>
-                    <div class="contact__information reveal-fade-up">
-                        <i class="uil uil-phone contact__icon"></i>
+        <section class="home section" id="home">
+            <div class="home__container container grid reveal-top">
+                <h1 class="home__title txt-fx fade-right">Здравейте, аз съм Стайко</h1>
+                <p class="home__description">UX/UI дизайнер, специализиран в B2B е-търговия и дизайн системи.</p>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <h2 class="section__title reveal-top">Професионални умения</h2>
+            
+            <div class="skills__container container grid reveal-top">
+                <div class="skills__content skills__close">
+                    <div class="skills__header">
+                        <i class="uil uil-brackets-curly skills__icon"></i>
                         <div>
-                            <h3 class="contact__title">Call Me</h3>
-                            <span class="contact__subtitle">+359 897839842</span>
+                            <h1 class="skills__title">Frontend Development</h1>
                         </div>
+                        <i class="uil uil-angle-down skills__arrow"></i>
                     </div>
-                    <div class="contact__information reveal-fade-up delay-100">
-                        <i class="uil uil-envelope contact__icon"></i>
-                        <div>
-                            <h3 class="contact__title">Email</h3>
-                            <span class="contact__subtitle">staikone@email.com</span>
-                        </div>
+                    <div class="skills__list grid">
+                        <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">HTML/CSS</h3></div></div>
+                        <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">JavaScript</h3></div></div>
                     </div>
-                    <div class="contact__information reveal-fade-up delay-200">
-                        <i class="uil uil-map-marker contact__icon"></i>
-                        <div>
-                            <h3 class="contact__title">Location</h3>
-                            <span class="contact__subtitle">Bulgaria - Sofia</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact__actions grid reveal-fade-up delay-300">
-                    <a href="mailto:staikone@gmail.com" class="button button--flex contact__button">
-                        <i class="uil uil-envelope button__icon"></i> Send Email
-                    </a>
-                    <a href="https://www.planfy.com/" target="_blank" rel="noopener" class="button button--flex contact__button">
-                        <i class="uil uil-calendar-alt button__icon"></i> Book a Meeting
-                    </a>
                 </div>
             </div>
         </section>
-    </main>
 
-    <footer class="footer" data-landmark-index="3">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h1 class="footer__title">Stayko</h1>
-                    <span class="footer__subtitle">Visual, UX/UI Designer</span>
-                </div>
-                <ul class="footer__links">
-                    <li>
-                        <a href="https://staikone.github.io/SNTest.github.io/index.html#portfolio" class="footer__link">Projects</a>
-                    </li>
-                    <li>
-                        <a href="https://staikone.github.io/SNTest.github.io/index.html#about" class="footer__link">About</a>
-                    </li>
-                    <li>
-                        <a href="https://drive.google.com/file/d/1XrD2A0Etg42ohongGsYNEXFhg9dVApa6/view?usp=drive_link" target="_blank" rel="noopener" class="footer__link">Download CV</a>
-                    </li>
-                </ul>
-                <div class="footer__socials">
-                    <a href="https://www.facebook.com/" target="_blank" class="footer__social">
-                        <i class="uil uil-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank" class="footer__social">
-                        <i class="uil uil-instagram"></i>
-                    </a>
-                    <a href="https://www.twitter.com/" target="_blank" class="footer__social">
-                        <i class="uil uil-twitter-alt"></i>
-                    </a>
-                </div>
-                <p class="footer__copy">© Bedimcode. All right reserved</p>
-            </div>
-        </div>
-    </footer>
+    </main>
 
     <a href="#" class="scrollup" id="scroll-up">
         <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
-    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <script src="assets/css/swiper-bundle.min.js"></script>
+    
     <script src="assets/js/main.js"></script>
 </body>
 </html>
