@@ -204,7 +204,9 @@ themeButton.addEventListener("click", () => {
 });
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
-const revealElements = document.querySelectorAll('.reveal-top');
+const revealElements = document.querySelectorAll(
+    '.reveal-top, .reveal-fade-up, .reveal-fade-in, .txt-fx'
+);
 
 const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
