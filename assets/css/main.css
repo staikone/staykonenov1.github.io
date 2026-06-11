@@ -884,48 +884,18 @@ margin-top: calc(var(--mb-3) + 5rem);
 }
 
 /*==================== CONTACT ME ====================*/
-.contact__container {
-    row-gap: 3rem;
-}
-
-.contact__information {
-    display: flex;
-    margin-bottom: var(--mb-2);
-}
-
-.contact__icon {
-    font-size: 2rem;
+.contact__card-icon {
+    display: block;
+    font-size: 2.5rem;
     color: var(--first-color);
-    margin-right: var(--mb-0-75);
+    margin-bottom: var(--mb-1);
 }
 
-.contact__title {
-    font-size: var(--h3-font-size);
-    font-weight: var(--font-medium);
-}
-
-.contact__subtitle {
+.services__text {
     font-size: var(--small-font-size);
     color: var(--text-color-light);
+    margin-bottom: var(--mb-1);
 }
-
-.contact__content {
-    background-color: var(--input-color);
-    border-radius: 0.5rem;
-    padding: 0.75rem 1rem 0.25rem;
-}
-
-.contact__input {
-    width: 100%;
-    background-color: var(--input-color);
-    color: var(--text-color);
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    border: none;
-    outline: none;
-    padding: 0.25rem 0.5rem 0.5rem 0;
-}
-
 .contact__label {
     font-size: var(--smaller-font-size);
     color: var(--title-color);
@@ -971,13 +941,6 @@ margin-top: calc(var(--mb-3) + 5rem);
 
 .footer__social:hover {
     color: var(--first-color-lighter);
-}
-
-.footer__copy {
-    font-size: var(--smaller-font-size);
-    text-align: center;
-    color: var(--text-color-light);
-    margin-top: var(--mb-3);
 }
 
 .footer__title,
@@ -1427,10 +1390,6 @@ margin-top: calc(var(--mb-3) + 5rem);
     .footer__socials {
         justify-self: flex-end;
     }
-
-    .footer__copy {
-        margin-top: 4.5rem;
-    }
     .home__social {
         transform: translateX(0rem);
         margin-top: 32px;
@@ -1540,33 +1499,41 @@ margin-left: 16px;
 }
 }
 
-/*==================== SCROLL ANIMATION ====================*/
-.reveal-top {
+/*==================== SCROLL ANIMATIONS ====================*/
+.reveal-top,
+.reveal-fade-up,
+.reveal-fade-in,
+.txt-fx {
     opacity: 0;
-    transform: translateY(-30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: transform, opacity;
+    transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1),
+                transform 0.8s cubic-bezier(0.5, 0, 0, 1);
 }
 
-.reveal-top.active-reveal {
+.reveal-top {
+    transform: translateY(-30px);
+}
+
+.reveal-fade-up {
+    transform: translateY(40px);
+}
+
+.reveal-fade-in {
+    transform: translateY(15px);
+}
+
+.txt-fx.slide-up {
+    transform: translateY(50px);
+    transition-duration: 1s;
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+
+.active-reveal {
     opacity: 1;
     transform: translateY(0);
 }
 
-/*==================== CONTACT BUTTONS ====================*/
-.contact__actions {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: var(--mb-2);
-}
-
-.contact__button {
-    font-size: var(--normal-font-size);
-    padding: 1rem 1.5rem;
-}
-
-@media screen and (max-width: 568px) {
-    .contact__actions {
-        flex-direction: column;
-    }
 }
